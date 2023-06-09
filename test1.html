@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teststyle.css">
+
+
+    <style>
+        .cover {
+            margin-top: 100px;
+            padding: 0px 30px;
+            position: relative;
+            margin-left: auto;
+            background-color: blue;
+            margin-right: auto;
+        }
+
+        .scroll-images {
+            margin-left: 30px;
+            width: 400px;
+            height: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .scroll-images div {
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: grey;
+            margin: 2px;
+        }
+
+        .scroll-images::-webkit-scrollbar {
+            width: 5px;
+            height: 8px;
+            background-color: #aaa;
+        }
+
+        .scroll-images::-webkit-scrollbar-thumb {
+            background-color: black;
+        }
+
+        .child {
+            width: 120px;
+            height: 100px;
+            margin: 1px 10px;
+            overflow: hidden;
+        }
+
+
+        .left {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="cover">
+        <button class="left" id="lb" onclick="leftscroll()">Left </button>
+        <div class="scroll-images" id="si">
+            <div> 1 </div>
+            <div> 2 </div>
+            <div> 3 </div>
+            <div> 4 </div>
+            <div> 5 </div>
+            <div> 6 </div>
+        </div>
+        <button class="right" id="rb" onclick="rightscroll()"> Right </button>
+    </div>
+</body>
+
+<script>
+    $('#slideRight').click(function () {
+        $('#si').animate({ scrollLeft: '+=500' }, 1000);
+    });
+
+    $('#slideLeft').click(function () {
+        $('#si').animate({ scrollLeft: '-=500' }, 1000);
+    });
+/*     function leftScroll() {
+            const left = document.getElementById("si");
+            left.scrollBy(200, 0);
+        }
+        function rightScroll() {
+            const right = document.getElementById("si");
+            right.scrollBy(-200, 0);
+        } */
+</script>
+
+</html>

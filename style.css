@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgba(255, 255, 255, 0.682);
+}
+
+.sec-header {
+    background-color: transparent;
+    height: 100px;
+    position: sticky;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    box-sizing: content-box;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(96, 123, 176);
+}
+
+header div a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    padding: 0px 5px;
+}
+
+header ul li a {
+    cursor: pointer;
+    display: block;
+    padding: 10px 10px;
+    border-radius: 1px;
+    text-decoration: none;
+    color: white;
+    transition: all ease-in 0.2s;
+}
+
+header ul li a:hover {
+    border: solid 1px white;
+    box-shadow: 0px 0px 20px 0px rgb(210, 239, 255);
+}
+
+.sec-1 {
+    background-color: white;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.sec-1 div {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    border: solid 1px rgb(149, 149, 149);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.sec-1 div:hover {
+    border: solid 1px rgb(37, 98, 115);
+}
+
+.sec-1 div input {
+    display: block;
+    padding: 5px;
+    border: none;
+    text-transform: capitalize;
+
+}
+
+.sec-1 div input:focus {
+    outline: none;
+}
+
+.sec-1 div img {
+    display: block;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.sec-2 {
+    display: flex;
+    background-color: rgba(173, 239, 245, 0.8);
+    height: 200px;
+    justify-content: space-between;
+}
+
+.left 
+{
+    display: block;
+    border-radius: 0px 50px 50px 0px;
+    box-sizing: content-box;
+    background-color: rgba(97, 132, 139, 0.444);
+    height: 200px; width: 30px;
+    margin-top: 0px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+}
+.left::after
+{
+    content: '<<';
+    display: block;
+    padding-top: 90px;
+}
+.left:hover::after
+{
+    content: '< <';
+    color: rgb(255, 255, 255);
+    margin-right: 8px;
+    transition: all ease-in-out 0.3s;
+}
+.left:hover
+{
+    background-color: rgba(89, 136, 145, 0.7);
+    width: 32px;
+    transition: all ease-in-out 0.3s;
+}
+
+.sec-2 .frame 
+{
+    display: flex;
+    height: 200px; width: 1000px;
+    border: solid 1px red;
+    column-gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scrollbar-color: aqua;  
+}
+.frame::-webkit-scrollbar
+{
+    width: 10px;
+}
+.frame::-webkit-scrollbar-track
+{
+    background-color: antiquewhite;
+}
+.frame::-webkit-scrollbar-thumb
+{
+    background-color: aquamarine;
+}
+
+.frame div 
+{
+    display: block;
+    height: 300px; min-width: 300px;
+    background-color: grey;
+}
+
+.right 
+{
+    display: block;
+    border-radius: 50px 0px 0px 50px;
+    box-sizing: content-box;
+    background-color: rgba(97, 132, 139, 0.444);
+    height: 200px; width: 30px;
+    margin-top: 0px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+}
+.right::after
+{
+    content: '>>';
+    display: block;
+    padding-top: 90px;
+}
+.right:hover::after
+{
+    content: '> >';
+    color: rgb(255, 255, 255);
+    margin-left: 8px;
+    transition: all ease-in-out 0.3s;
+}
+.right:hover
+{
+    background-color: rgba(89, 136, 145, 0.7);
+    width: 32px;
+    transition: all ease-in-out 0.3s;
+}
