@@ -88,10 +88,15 @@ header ul li a:hover {
 
 .sec-1 div input {
     display: block;
+    width: 100px;
     padding: 5px;
     border: none;
     text-transform: capitalize;
-
+}
+.sec-1 div input:focus
+{
+    width: 300px;
+    transition: all ease-in-out 0.3s;
 }
 
 .sec-1 div input:focus {
@@ -157,7 +162,9 @@ header ul li a:hover {
     overflow-y: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
-    scrollbar-color: aqua;  
+    scrollbar-color: aqua; 
+    align-items: center;
+    justify-content: center; 
 }
 .frame::-webkit-scrollbar
 {
@@ -176,8 +183,9 @@ header ul li a:hover {
 .frame div 
 {
     display: block;
-    height: 300px; min-width: 700px;
+    height: 180px; min-width: 700px;
     background-color: grey;
+    border-radius: 20px;
 }
 
 .right 
@@ -213,4 +221,19 @@ header ul li a:hover {
     background-color: rgba(89, 136, 145, 0.7);
     width: 32px;
     transition: all ease-in-out 0.3s;
+}
+
+.sec-3
+{
+    display: flex;
+    height: 400px;
+    background-color: rgb(172, 203, 214);
+    margin-top: 20px;
+}
+.sec-3 .categories
+{
+    display: block;
+    height: 200px; width: auto;
+    background-color: rgb(14, 124, 124);
+
 }
