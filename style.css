@@ -115,21 +115,23 @@ header ul li a:hover {
 .left 
 {
     display: block;
+    position: absolute;
     border-radius: 0px 50px 50px 0px;
     box-sizing: content-box;
-    background-color: rgba(97, 132, 139, 0.444);
-    height: 200px; width: 30px;
-    margin-top: 0px;
+    background-color: rgb(138, 198, 198,0.5);
+    height: 180px; width: 30px;
+    margin-top: 10px;
     text-align: center;
     justify-content: center;
     align-content: center;
     cursor: pointer;
+    z-index: 9;
 }
 .left::after
 {
     content: '<<';
     display: block;
-    padding-top: 90px;
+    padding-top: 80px;
 }
 .left:hover::after
 {
@@ -148,8 +150,8 @@ header ul li a:hover {
 .sec-2 .frame 
 {
     display: flex;
-    height: 200px; width: 1000px;
-    border: solid 1px red;
+    height: 200px; width: 100%;
+    background-color: rgb(138, 198, 198);
     column-gap: 20px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -159,6 +161,7 @@ header ul li a:hover {
 }
 .frame::-webkit-scrollbar
 {
+    display: none;
     width: 10px;
 }
 .frame::-webkit-scrollbar-track
@@ -173,19 +176,20 @@ header ul li a:hover {
 .frame div 
 {
     display: block;
-    height: 300px; min-width: 300px;
+    height: 300px; min-width: 700px;
     background-color: grey;
-    border-radius: 20px;
 }
 
 .right 
 {
     display: block;
+    position: absolute;
+    right: 0;
     border-radius: 50px 0px 0px 50px;
     box-sizing: content-box;
-    background-color: rgba(97, 132, 139, 0.444);
-    height: 200px; width: 30px;
-    margin-top: 0px;
+    background-color: rgb(138, 198, 198,0.5);
+    height: 180px; width: 30px;
+    margin-top: 10px;
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -195,7 +199,7 @@ header ul li a:hover {
 {
     content: '>>';
     display: block;
-    padding-top: 90px;
+    padding-top: 80px;
 }
 .right:hover::after
 {
@@ -209,12 +213,4 @@ header ul li a:hover {
     background-color: rgba(89, 136, 145, 0.7);
     width: 32px;
     transition: all ease-in-out 0.3s;
-}
-
-.sec-3
-{
-    display: flex;
-    background-color: antiquewhite;
-    height: 400px;
-
 }
